@@ -1,6 +1,6 @@
   
   
-  # 
+  Single server Stop use ansible
 
   - hosts:
     - localhost
@@ -11,7 +11,7 @@
       server_instance_ids:
         - i-0f07bad58761d2cb0
 
-  # MULTIHOST STOPS IN AWS 
+  MultiServer Stop use Ansible
 
   ---
   - hosts:
