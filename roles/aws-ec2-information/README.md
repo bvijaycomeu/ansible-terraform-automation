@@ -1,0 +1,1 @@
+Vy default result stored in /tmp/aws-ec2-information.txt

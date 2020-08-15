@@ -1,0 +1,143 @@
+{% for host in play_hosts %}
+{# {{ hostvars[host]['result1']['stdout'] }} #}
+
+Server Name: {{host}}
+
+{% for key,value in ansible_facts.items() %}
+{% if key == 'lsb'
+ or key == 'selinux'
+ or key == 'apparmor'
+ or key == 'default_ipv4'
+ or key == 'date_time'
+ or key == 'default_ipv6' %}
+{% for a,b in value.items() %}
+{{ a.ljust(25) }} - {{ b }}
+{% endfor %}
+{% endif %}
+{% if key == 'dns' %}
+{% for a,b in value.items() %}
+{% if a == 'options' %}
+{% for c,d in b.items()  %}
+  {{c.ljust(23)}} - {{d}}
+{% endfor %}
+{% endif %}
+{% if a == 'nameservers' %}
+{% for c in b %}
+{% set DnsServer = 'Dns Server'%}
+{{DnsServer.ljust(25)}} - {{ c }}
+{% endfor %}
+{% else %}
+{% if a != 'options' %}
+{{ a.ljust(25) }} - {{ b }}
+{% endif %}
+{% endif %}
+{% endfor %}
+{% endif %}
+{% if key == 'memory_mb' %}
+{% for a,b in value.items() %}
+Memory: {{a}}
+{% for c, d in b.items() %}
+  {{ c.ljust(23)}} - {{ d }}
+{% endfor %}
+{% endfor %}
+{% endif %}
+{% if key == 'python' %}
+{% for a,b in value.items() %}
+{% if a != 'version_info' %}
+{% if a == 'version' %}
+{% for c,d  in b.items() %}
+  {{ c.ljust(23) }} - {{d}}
+{% endfor %}
+{% else %}
+{{ a.ljust(25) }} - {{ b }}
+{% endif %}
+{% endif %}
+{% endfor %}
+{% endif %}
+{% if key == 'proc_cmdline' %}
+{% for a,b in value.items() %}
+{{ a.ljust(25) }} - {{ b }}
+{% endfor %}
+{% endif %}
+{% if key == 'cmdline' %}
+{% for a,b in value.items() %}
+{{ a.ljust(25) }} - {{ b }}
+{% endfor %}
+{% endif %}
+{% if key == 'memfree_mb'
+ or key == 'distribution_file_path'
+ or key == 'processor_cores'
+ or key == 'architecture' 
+ or key == 'effective_user_id'
+ or key == 'kernel'
+ or key == 'domain'
+ or key == 'distribution_version'
+ or key == 'discovered_interpreter_python'
+ or key == 'os_family'
+ or key == 'memtotal_mb'
+ or key == 'distribution_release'
+ or key == 'nodename'
+ or key == 'virtualization_type'
+ or key == 'product_name'
+ or key == 'uptime_seconds' 
+ or key == 'bios_version'
+ or key == 'system_vendor'
+ or key == 'processor_count'
+ or key == 'bios_version'
+ or key == 'swaptotal_mb'
+ or key == 'swapfree_mb'
+ or key == 'fqdn'
+ or key == 'product_uuid'
+ or key == 'user_uid'
+ or key == 'distribution_major_version'
+ or key == 'python_version'
+ or key == 'hostname'
+ or key == 'machine'
+ or key == 'kernel_version'
+ or key == 'bios_date'
+ or key == 'service_mgr'
+ or key == 'product_serial'
+ or key == 'product_name'
+ or key == 'form_factor'
+ or key == 'system'
+ or key == 'system_vendor'
+ or key == 'distribution_release'
+ or key == 'real_user_id'
+ or key == 'user_id'
+ or key == 'user_shell'
+ or key == 'user_gecos'
+ or key == 'real_group_id'
+ or key == 'userspace_architecture'
+ or key == 'selinux_python_present'
+ or key == 'distribution_file_variety'
+ or key == 'processor_threads_per_core'
+ or key == 'pkg_mgr'
+ or key == 'processor_vcpus'
+ or key == 'distribution_version'
+ or key == 'machine_id'
+ or key == 'effective_user_id'
+ or key == 'user_gid'
+ or key == 'effective_group_id'
+ or key == 'distribution'
+ or key == 'machine_id' %}
+{{ key.ljust(25) }} - {{ value }}
+{% endif %}
+{% if key == 'processor'
+or key == 'interfaces'
+or key == 'all_ipv6_addresses' 
+or key == 'all_ipv4_addresses' %}
+{% set _value = ''%}
+{{ key.ljust(25) }} -
+{% for a in value %}
+{{_value.ljust(25)}} - {{ a  }}
+{% endfor %}
+{% endif %}
+{% if key == 'mounts' %}
+{% for a in value %}
+{% for c, d in a.items() %}
+  {{c.ljust(23)}} - {{d}}
+{% endfor %}
+{% endfor %}
+{% endif %}
+{% endfor %}
+{% endfor %}

@@ -1,0 +1,14 @@
+---
+- name: Get EC2 Instance information
+  ec2_instance_info:
+    instance_ids: "{{ item }}"
+    aws_access_key: "{{ aws_access_key | default('') }}" 
+    aws_secret_key: "{{ aws_access_key | default('') }}" 
+    region: "{{ region | default('us-east-1') }}"
+  loop: "{{ instance_ids }}"
+  register: result
+
+- name: Create result of the ec2 indtances
+  template:
+    src: information-templates.j2
+    dest: /tmp/aws-ec2-information.txt
