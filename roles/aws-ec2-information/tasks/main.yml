@@ -8,7 +8,7 @@
   loop: "{{ instance_ids }}"
   register: result
 
-- name: Create result of the ec2 indtances
+- name: Create result of the ec2 instances
   template:
     src: information-templates.j2
     dest: /tmp/aws-ec2-information.txt
