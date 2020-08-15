@@ -1,3 +1,1 @@
-How to use role?
-
-[/files/ex.png]
+![Examples][/files/ex.png]
