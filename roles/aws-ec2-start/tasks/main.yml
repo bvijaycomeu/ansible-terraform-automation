@@ -1,0 +1,10 @@
+- name: Stop the sandbox instances
+  ec2:
+    instance_ids: '{{ item }}'
+    aws_access_key: "{{ aws_access_key | default('') }}" # AKIAIMDPAY7I5QMRF6EQ
+    aws_secret_key: "{{ aws_access_key | default('') }}" # 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
+    region: "{{ region | default('us-east-1') }}"              # us-east-1
+    state: running
+    wait: True
+  loop: "{{ server_instance_ids}}"
+  when: server_instance_ids
