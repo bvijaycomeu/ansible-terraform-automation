@@ -1,1 +1,4 @@
 .terraform
+version.tf
+provider.tf
+backend.tf

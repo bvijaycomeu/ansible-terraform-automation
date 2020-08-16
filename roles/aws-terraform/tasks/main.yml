@@ -3,12 +3,13 @@
 - name: create provider for terraform
   template:
     src: "{{ item }}.j2"
-    dest: "{{ terraform_directory }}/{{item}}"
+    dest: "{{ terraform_directory }}/{{ item }}"
   loop:
   - provider.tf
   - backend.tf
+  - version.tf
 
-- name: Terraform Basic Deployment without Backends
+- name: Terraform Basic Deployment with Backends
   terraform:
     project_path: "{{ terraform_directory }}/"
     force_init: true
