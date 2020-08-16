@@ -2,9 +2,9 @@
 - name: Stop the sandbox instances
   ec2:
     instance_ids: '{{ item }}'
-    aws_access_key: "{{ aws_access_key | default('') }}" 
-    aws_secret_key: "{{ aws_access_key | default('') }}" 
-    region: "{{ region | default('us-east-1') }}"
+    aws_access_key: "{{ lookup('env','AWS_SECRET_ACCESS_KEY') }}"
+    aws_secret_key: "{{ lookup('env','AWS_SECRET_KEY') }}"
+    region: "{{ lookup('env','AWS_REGION') }}"
     state: stopped
     wait: True
   loop: "{{ server_instance_ids }}"

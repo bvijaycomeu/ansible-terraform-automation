@@ -2,9 +2,9 @@
 - name: Get EC2 Instance information
   ec2_instance_info:
     instance_ids: "{{ item }}"
-    aws_access_key: "{{ aws_access_key | default('') }}" 
-    aws_secret_key: "{{ aws_access_key | default('') }}" 
-    region: "{{ region | default('us-east-1') }}"
+    aws_access_key: "{{ lookup('env','AWS_SECRET_ACCESS_KEY') }}"
+    aws_secret_key: "{{ lookup('env','AWS_SECRET_KEY') }}"
+    region: "{{ lookup('env','AWS_REGION') }}"
   loop: "{{ instance_ids }}"
   register: result
 

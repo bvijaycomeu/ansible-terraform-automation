@@ -6,7 +6,7 @@
   roles:
   - role: aws-terraform
     terraform_directory: terraform/aws-rds # Name of the directory to deploy
-    state: present
+    state: absent
     backend_config:
       bucket: jayetfbackend
       key: "provision.tfstate"
