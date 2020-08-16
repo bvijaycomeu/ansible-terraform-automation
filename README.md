@@ -12,6 +12,10 @@ Requirements
     $ sudo apt-add-repository --yes --update ppa:ansible/ansible
     $ sudo apt install ansible
 
+
+    Refrence: https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#installing-ansible-on-ubuntu
+    
+  
   Terraform
   ---------
 
@@ -20,6 +24,12 @@ Requirements
     $ wget https://releases.hashicorp.com/terraform/0.13.0/ terraform_0.13.0_linux_amd64.zip
     $ unzip terraform_0.13.0_linux_amd64.zip
     $ sudo mv terraform /usr/local/bin
+    
+    
+    
+    Refrence: https://www.terraform.io/downloads.html
+    
+    
 
     AWS INFRASTRUCTURE CREDENTIALS
 
