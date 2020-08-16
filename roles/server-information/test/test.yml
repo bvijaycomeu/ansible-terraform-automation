@@ -1,0 +1,5 @@
+---
+- hosts: all
+  roles:
+  - role: server-information
+    result_directory: "/tmp/{{ansible_hostname}}.txt"

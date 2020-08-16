@@ -1,2 +1,1 @@
 localhost ansible_connection=local
-server-one ansible_connection=ssh ansible_user=node ansible_ssh_pass=Password@123 ansible_host=52.167.225.12

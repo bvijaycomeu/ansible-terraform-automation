@@ -16,6 +16,6 @@ Requirements
 
       1. export AWS_SECRET_ACCESS_KEY=AKI7I5QMRF6EQRETITP
 
-      2. export AWS_SECRET_KEY=sdfwvg3/cemGRMrPNsmWRmn7jwdpwq
+      2. export AWS_SECRET_KEY=sdfwvg3MrPNsmWRmn7jwdpwq
 
       3. export AWS_REGION=us-east-1

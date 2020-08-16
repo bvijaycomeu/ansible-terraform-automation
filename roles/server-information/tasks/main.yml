@@ -2,5 +2,5 @@
 - name: 'Get host information'
   template:
     src: hostDetails.j2
-    dest: "{{ result_path | default('/tmp/server-information.txt') }}" 
+    dest: "{{ result_directory | default('/tmp/server-information.txt') }}" 
   delegate_to: localhost

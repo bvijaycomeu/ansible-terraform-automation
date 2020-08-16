@@ -11,4 +11,4 @@
 - name: Create result of the ec2 instances
   template:
     src: information-templates.j2
-    dest: /tmp/aws-ec2-information.txt
+    dest: "{{ result_directory | default('/tmp/aws-ec2-information.txt') }}"  
