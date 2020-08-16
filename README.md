@@ -2,6 +2,9 @@
 
 Requirements
 
+    Do not use any credentials information inside the roles or callable main.yml file. Its all default pickup from environment variable.
+  
+
   Ansible
   -------
 
