@@ -23,6 +23,6 @@ Requirements
 
     AWS INFRASTRUCTURE CREDENTIALS
 
-      $ export AWS_SECRET_ACCESS_KEY=AKI7I5QMRF6EQRETITP
-      $ export AWS_SECRET_KEY=sdfwvg3MrPNsmWRmn7jwdpwq
-      $ export AWS_REGION=us-east-1
+    $ export AWS_SECRET_ACCESS_KEY=AKI7I5QMRF6EQRETITP
+    $ export AWS_SECRET_KEY=sdfwvg3MrPNsmWRmn7jwdpwq
+    $ export AWS_REGION=us-east-1
