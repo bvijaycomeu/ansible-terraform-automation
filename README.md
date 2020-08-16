@@ -13,7 +13,7 @@ Requirements
     $ sudo apt install ansible
 
 
-    Refrence: https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#installing-ansible-on-ubuntu
+    Reference: https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#installing-ansible-on-ubuntu
     
   
   Terraform
@@ -27,7 +27,7 @@ Requirements
     
     
     
-    Refrence: https://www.terraform.io/downloads.html
+    Reference: https://www.terraform.io/downloads.html
     
     
 
