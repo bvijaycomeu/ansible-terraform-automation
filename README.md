@@ -15,24 +15,14 @@ Requirements
   Terraform
   ---------
 
-  # Ubuntu
+  Ubuntu
 
     $ wget https://releases.hashicorp.com/terraform/0.13.0/ terraform_0.13.0_linux_amd64.zip
-    
     $ unzip terraform_0.13.0_linux_amd64.zip
-    
     $ sudo mv terraform /usr/local/bin
 
+    AWS INFRASTRUCTURE CREDENTIALS
 
-    Ansible for Management Purpose
-
-    Terraform for Provisoining Purpose
-
-
-    AWS INFRASTRUCTURE
-
-      1. export AWS_SECRET_ACCESS_KEY=AKI7I5QMRF6EQRETITP
-
-      2. export AWS_SECRET_KEY=sdfwvg3MrPNsmWRmn7jwdpwq
-
-      3. export AWS_REGION=us-east-1
+      $ export AWS_SECRET_ACCESS_KEY=AKI7I5QMRF6EQRETITP
+      $ export AWS_SECRET_KEY=sdfwvg3MrPNsmWRmn7jwdpwq
+      $ export AWS_REGION=us-east-1
