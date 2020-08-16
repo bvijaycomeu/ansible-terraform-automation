@@ -1,0 +1,20 @@
+---
+# tasks file for terraform
+- name: create provider for terraform
+  template:
+    src: "{{ item }}.j2"
+    dest: "{{ terraform_directory }}/{{item}}"
+  loop:
+  - provider.tf
+  - backend.tf
+
+- name: Terraform Basic Deployment without Backends
+  terraform:
+    project_path: "{{ terraform_directory }}/"
+    force_init: true
+    state: "{{ state | default('present') }}"
+    variables: "{{ variables }}"
+    backend_config: "{{ backend_config }}"
+  when: 
+  - backend_config is defined
+  - variables is defined
