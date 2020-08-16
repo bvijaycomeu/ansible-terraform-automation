@@ -1,19 +1,21 @@
-# Full automation scripts
+# AWS AUTOMATION
 
 Requirements
 
-Ansible
-Terraform
+  Ansible
+
+  Terraform
 
 
- Ansible for Management Purpose
- Terraform for Provisoining Purpose
+    Ansible for Management Purpose
+
+    Terraform for Provisoining Purpose
 
 
- AWS INFRASTRUCTURE
+    AWS INFRASTRUCTURE
 
-   1. export AWS_SECRET_ACCESS_KEY=AKI7I5QMRF6EQRETITP
+      1. export AWS_SECRET_ACCESS_KEY=AKI7I5QMRF6EQRETITP
 
-   2. export AWS_SECRET_KEY=sdfwvg3/cemGRMrPNsmWRmn7jwdpwq
-   
-   3. export AWS_REGION=us-east-1
+      2. export AWS_SECRET_KEY=sdfwvg3/cemGRMrPNsmWRmn7jwdpwq
+
+      3. export AWS_REGION=us-east-1
