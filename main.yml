@@ -2,10 +2,10 @@
 - hosts:
   - localhost
   vars:
-    environment: dev
+    env: dev
   roles:
   - role: aws-terraform
-    terraform_directory: terraform-deployment # Name of the directory to deploy
+    terraform_directory: provision # Name of the directory to deploy
     state: absent
     backend_config:
       bucket: jayetfbackend
@@ -17,3 +17,4 @@
       access_key: "{{ lookup('env','AWS_SECRET_ACCESS_KEY') }}"
       secret_key: "{{ lookup('env','AWS_SECRET_KEY') }}"
       region: "{{ lookup('env','AWS_REGION') }}"
+      key_name: test-key
