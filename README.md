@@ -10,10 +10,10 @@ Requirements
 
   Ubuntu 
 
-    $ sudo apt update
-    $ sudo apt install software-properties-common
-    $ sudo apt-add-repository --yes --update ppa:ansible/ansible
-    $ sudo apt install ansible
+     sudo apt update
+     sudo apt install software-properties-common
+     sudo apt-add-repository --yes --update ppa:ansible/ansible
+     sudo apt install ansible
 
 
     Reference: https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#installing-ansible-on-ubuntu
@@ -24,9 +24,9 @@ Requirements
 
   Ubuntu
 
-    $ wget https://releases.hashicorp.com/terraform/0.13.0/ terraform_0.13.0_linux_amd64.zip
-    $ unzip terraform_0.13.0_linux_amd64.zip
-    $ sudo mv terraform /usr/local/bin
+     wget https://releases.hashicorp.com/terraform/0.13.0/terraform_0.13.0_linux_amd64.zip
+     unzip terraform_0.13.0_linux_amd64.zip
+     sudo mv terraform /usr/bin
     
     
     
