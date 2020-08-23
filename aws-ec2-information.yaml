@@ -1,0 +1,7 @@
+---
+- hosts: all
+  roles:
+  - role: aws-ec2-information
+    result_directory: /tmp/ec2-intsnace-reports.txt
+    instance_ids:
+     - i-087c950be2d0f056c

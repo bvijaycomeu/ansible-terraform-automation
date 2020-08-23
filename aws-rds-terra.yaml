@@ -1,0 +1,21 @@
+---
+- hosts:
+  - localhost
+  vars:
+    env: dev
+  roles:
+  - role: aws-terraform
+    terraform_directory: terraform/aws-rds # Name of the directory to deploy
+    state: absent
+    backend_config:
+      bucket: logbackend-test
+      key: "testpoc.tfstate"
+      access_key: "{{ lookup('env','AWS_SECRET_ACCESS_KEY') }}"
+      secret_key: "{{ lookup('env','AWS_SECRET_KEY') }}"
+      region: "{{ lookup('env','AWS_REGION') }}"
+    variables:
+      access_key: "{{ lookup('env','AWS_SECRET_ACCESS_KEY') }}"
+      secret_key: "{{ lookup('env','AWS_SECRET_KEY') }}"
+      region: "{{ lookup('env','AWS_REGION') }}"
+      keypair_name: vijay-auto
+      rds_password: "Password345123uti"

@@ -1,0 +1,6 @@
+---
+- hosts: localhost
+  roles:
+   - role: aws-ec2-stop
+     server_instance_ids: 
+          - i-087c950be2d0f056c
